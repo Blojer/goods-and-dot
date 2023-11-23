@@ -5,7 +5,7 @@ const initialCards = [
     ogrn: '5167746237147',
     address: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34',
     warehouse: 'Коледино WB',
-    link: '../images/book.png',
+    link: './images/book.png',
     company: 'OOO Вайлдберриз',
     price: 475,
     amount: 5
@@ -17,7 +17,7 @@ const initialCards = [
     ogrn: '5167746237149',
     address: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34',
     warehouse: 'Коледино WB',
-    link: '../images/case.png',
+    link: './images/case.png',
     company: 'OOO Мегапрофстиль',
     price: 11500,
     amount: 200
@@ -29,7 +29,7 @@ const initialCards = [
     ogrn: '5167746237147',
     address: '129337, Москва, улица Красная Сосна, 2, корпус 1, стр. 1, помещение 2, офис 34',
     warehouse: 'Коледино WB',
-    link: '../images/t-shirt.png',
+    link: './images/t-shirt.png',
     company: 'OOO Вайлдберриз',
     price: 1015,
     amount: 10
