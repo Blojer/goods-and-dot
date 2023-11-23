@@ -1,0 +1,40 @@
+.count__text {
+  width: 44px;
+  height: 23px;
+  text-align: center;
+  appearance: textfield;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.count__text:focus {
+  outline: none;
+}
+
+.count__text::-webkit-outer-spin-button,
+.count__text::-webkit-inner-spin-button {
+  display: none;
+}
+
+.count__button {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  letter-spacing: -0.2px;
+  width: 24px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.count__button_type_plus {
+  padding: 2px 7px 7px 0;
+}
+
+.count__button_type_minus {
+  padding: 2px 7px 6px 8px;
+}

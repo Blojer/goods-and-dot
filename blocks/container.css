@@ -1,0 +1,34 @@
+.container {
+  max-width: 1352px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.container__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+}
+.container__button {
+  color: #cb11ab;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары и точка</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <script src="./scripts/calcProductsPrice.js" defer></script>
+    <script src="./scripts/constants.js" defer></script>
+    <script src="./scripts/products.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="menu-pc">
+          <nav class="header__menu">
+            <button class="header__burger-button"></button>
+            <a href="#" class="header__logo">товары и точка</a>
+          </nav>
+          <form action="" class="header__search">
+            <input class="header__search-input" type="text" placeholder="Я ищу..." />
+            <button class="header__search-button"></button>
+          </form>
+          <nav class="header__navbar-pc">
+            <ul class="navbar-pc">
+              <li class="navbar-pc__item">
+                <a href="#" class="navbar-pc__link">
+                  <img src="./images/profile-icon-pc.svg" alt="Профиль" class="navbar-pc__icon" />
+                  <span class="navbar-pc__text">Профиль</span>
+                </a>
+              </li>
+              <li class="navbar-pc__item">
+                <a href="#" class="navbar-pc__link">
+                  <img src="./images/basket-navbar-pc.svg" alt="Корзина" class="navbar-pc__icon" />
+                  <span class="navbar-pc__text">Корзина</span>
+                  <span class="navbar-pc__notify">9</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="menu-mobile">
+          <button class="header__burger-button"></button>
+          <a href="#" class="header__logo">товары и точка</a>
+          <button class="header__search-button"></button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <form action="" class="basket">
+          <div class="basket__content">
+            <h1 class="basket__header">Корзина</h1>
+            <div class="basket__section">
+              <div class="accordion">
+                <label class="label__checkbox">
+                  <input type="checkbox" class="checkbox chekbox_type_all" checked="checked" />
+                  <span class="checkbox__custom"></span>
+                  <span class="checkbox__text">Выбрать все</span>
+                </label>
+                <button class="accordion__button" type="button"></button>
+              </div>
+              <div class="accordion__body">
+                <ul class="basket__items basket__items_type_current">
+                  <template id="product">
+                    <li class="basket__item basket__item_type_current">
+                      <label class="label label_type_current">
+                        <input
+                          type="checkbox"
+                          class="checkbox checkbox_type_product"
+                          checked="checked"
+                        />
+                        <span class="checkbox__custom checkbox__custom_type_current"></span>
+                        <img class="item__image" src="#" alt="#" />
+                        <div class="item__description">
+                          <div class="item__prices item__prices_type_mobile">
+                            <div class="item__price">
+                              <p class="item-price"></p>
+                              <span class="item-price__value">&nbspсом</span>
+                            </div>
+                            <p class="item-price__old"></p>
+                          </div>
+                          <h3 class="item__title"></h3>
+                          <div class="item__c-s">
+                            <p class="item__color"></p>
+                            <p class="item__size"></p>
+                          </div>
+                          <p class="item__warehouse"></p>
+                          <div class="item__company">
+                            <p class="item__store"></p>
+                            <div class="dropdown">
+                              <button class="company-info"></button>
+                              <div class="dropdown__content">
+                                <h3></h3>
+                                <p class="item__ogrn">ОГРН: <span class="item__ogrn"></span></p>
+                                <p class="item__address"></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <div class="item__control">
+                        <div class="item__count" data-counter>
+                          <button class="count__button count__button_type_minus" type="button">
+                            −
+                          </button>
+                          <input class="count__text" type="number" value="1" />
+                          <button class="count__button count__button_type_plus" type="button">
+                            +
+                          </button>
+                        </div>
+                        <div class="item__residue">Осталось 2 шт.</div>
+                        <div class="item__buttons">
+                          <button class="item__button-like" type="button"></button>
+                          <button class="item__button-delete" type="button"></button>
+                        </div>
+                      </div>
+                      <div class="item__prices">
+                        <div class="item__price">
+                          <p class="item-price"></p>
+                          <span class="item-price__value">&nbspсом</span>
+                        </div>
+                        <p class="item-price__old"></p>
+                      </div>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion">
+              <p class="accordion__text">Отсутствуют · 3 товара</p>
+              <button class="accordion__button" type="button"></button>
+            </div>
+            <div class="accordion__body">
+              <ul class="basket__items basket__items_type_absentees">
+                <li class="basket__item">
+                  <img
+                    class="item__image item__image_type_absentees"
+                    src="./images/t-shirt.png"
+                    alt="#"
+                  />
+                  <div class="item__description item__description_type_absentees">
+                    <h3 class="item__title item__title_type_absentees">
+                      Футболка UZcotton мужская
+                    </h3>
+                    <div class="item__c-s">
+                      <p class="item__color">Цвет: <span class="item__color-value">белый</span></p>
+                      <p class="item__size">Размер: <span class="item__color-value">56</span></p>
+                    </div>
+                  </div>
+                  <div class="item__control item__control_type_absentees">
+                    <div class="item__buttons">
+                      <button class="item__button-like"></button>
+                      <button class="item__button-delete"></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="basket__item">
+                  <img
+                    class="item__image item__image_type_absentees"
+                    src="./images/case.png"
+                    alt="#"
+                  />
+                  <div class="item__description item__description_type_absentees">
+                    <h3 class="item__title item__title_type_absentees">
+                      Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на
+                      Apple iPhone XR, MobiSafe
+                    </h3>
+                    <div class="item__c-s">
+                      <p class="item__color">
+                        Цвет: <span class="item__color-value">прозрачный</span>
+                      </p>
+                      <p class="item__size" style="display: none">
+                        Размер: <span class="item__color-value">56</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item__control item__control_type_absentees">
+                    <div class="item__buttons">
+                      <button class="item__button-like"></button>
+                      <button class="item__button-delete"></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="basket__item">
+                  <img
+                    class="item__image item__image_type_absentees"
+                    src="./images/book.png"
+                    alt="#"
+                  />
+                  <div class="item__description item__description_type_absentees">
+                    <h3 class="item__title item__title_type_absentees">
+                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
+                      шестигранные, Faber-Castell
+                    </h3>
+                    <div class="item__c-s" style="display: none">
+                      <p class="item__color">Цвет: <span class="item__color-value">белый</span></p>
+                      <p class="item__size" style="display: none">
+                        Размер: <span class="item__color-value">56</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item__control item__control_type_absentees">
+                    <div class="item__buttons">
+                      <button class="item__button-like"></button>
+                      <button class="item__button-delete"></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="delivery">
+              <div class="background">
+                <div class="container__header">
+                  <h2 class="container__title">Способ доставки</h2>
+                  <button class="container__button">Изменить</button>
+                </div>
+                <div class="delivery__info">
+                  <div class="delivery__selected-adress">
+                    <div class="delivery__adress">Пункт выдачи</div>
+                    <div class="delivery__data">
+                      <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                      <div class="delivery__rating">
+                        <img src="./images/star_fill.svg" alt="звезда" /> <span>4.99</span>
+                        <p class="delivery__text">Ежедневно с 10 до 21</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="delivery__cost">
+                    <div class="cost__data">Стоимость доставки</div>
+                    <div class="delivery__data">Бесплатно</div>
+                  </div>
+                </div>
+                <div class="data-delivery">
+                  <div class="data-delivery__list">
+                    <div class="data-delivery__item">
+                      <div class="data-delivery__date">5—6 февраля</div>
+                      <ul class="data-delivery__photos">
+                        <li class="data-delivery__photo">
+                          <img class="delivery__image" src="./images/t-shirt.png" alt="" /><span
+                            class="data-delivery__size"
+                          ></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="data-delivery__item">
+                      <div class="data-delivery__date">7—8 февраля</div>
+                      <ul class="data-delivery__photos">
+                        <li class="data-delivery__photo">
+                          <img class="delivery__image" src="./images/t-shirt.png" alt="" /><span
+                            class="data-delivery__size"
+                          ></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="purchase-returns">
+                  <img src="./images/check-mark.svg" alt="Галочка" class="check-mark" />
+                  <p class="purchase-returns__text">
+                    Обратная доставка товаров на склад при отказе — <span>бесплатно</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="payment">
+              <div class="background">
+                <div class="container__header">
+                  <h2 class="container__title">Способ оплаты</h2>
+                  <button class="container__button">Изменить</button>
+                </div>
+                <div class="card">
+                  <img src="./images/mir.svg" alt="" class="card__image" />
+                  <p class="card__number">1234 56•• •••• 1234</p>
+                  <p class="card__date">01/30</p>
+                </div>
+                <p class="payment__info">Спишем оплату с карты при получении</p>
+              </div>
+            </div>
+            <div class="recipient">
+              <div class="background background_type_recipient">
+                <div class="container__header">
+                  <h2 class="container__title">Получатель</h2>
+                </div>
+                <div class="recipient__info">
+                  <fieldset class="recipient__fieldset">
+                    <label class="label__recipient">
+                      Имя
+                      <input
+                        type="text"
+                        class="recipient__input recipient__input_type_name"
+                        placeholder="Имя"
+                      />
+                      <span class="recipient__input-error recipient__input-error_type_name"></span>
+                    </label>
+                    <label class="label__recipient">
+                      Фамилия
+                      <input
+                        type="text"
+                        class="recipient__input recipient__input_type_surname"
+                        placeholder="Фамилия"
+                      />
+                      <span
+                        class="recipient__input-error recipient__input-error_type_surname"
+                      ></span>
+                    </label>
+                  </fieldset>
+                  <fieldset class="recipient__fieldset">
+                    <label class="label__recipient">
+                      Почта
+                      <input
+                        type="email"
+                        class="recipient__input recipient__input_type_email"
+                        placeholder="Почта"
+                      />
+                      <span class="recipient__input-error recipient__input-error_type_email"></span>
+                    </label>
+                    <label class="label__recipient">
+                      Телефон
+                      <input
+                        type="tel"
+                        class="recipient__input recipient__input_type_phone"
+                        placeholder="Телефон"
+                        maxlength="30"
+                      />
+                      <span class="recipient__input-error recipient__input-error_type_phone"></span>
+                    </label>
+                    <label class="label__recipient">
+                      ИНН
+                      <input
+                        type="number"
+                        class="recipient__input recipient__input_type_inn"
+                        placeholder="ИНН"
+                      />
+                      <span class="recipient__input-text">Для таможенного оформления</span>
+                      <span class="recipient__input-error recipient__input-error_type_inn"></span>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="basket__sidebar">
+            <div class="basket__sidebar-sticky">
+              <div class="background">
+                <div class="container__header">
+                  <h2 class="container__title">Итого</h2>
+                  <div class="basket__price-box">
+                    <p class="basket__total-price">2 101 063</p>
+                    <span class="basket__total-price basket__total-price_type_value">&nbspсом</span>
+                  </div>
+                </div>
+                <div class="total__product">
+                  <p class="total__product-quantity">203 товара</p>
+                  <p class="total__product-amounf">2 302 048 сом</p>
+                </div>
+                <div class="total__discount">
+                  <p class="total__discount-title">Скидка</p>
+                  <p class="total__discount-amounf">−200 985 сом</p>
+                </div>
+                <div class="total__delivery">
+                  <p class="total__delivery-title">Доставка</p>
+                  <p class="total__delivery-amounf">Бесплатно</p>
+                </div>
+                <div class="delivery-transfer">
+                  <div class="basket-total__button">
+                    <p class="button__title">Доставка в пункт выдачи</p>
+                    <button class="button__image" type="button"></button>
+                  </div>
+                  <p class="delivery-transfer__address">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+                  <div class="delivery-transfer__date">5–8 фев</div>
+                  <div class="purchase-returns purchase-returns_type_absentees">
+                    <img src="./images/check-mark.svg" alt="Галочка" class="check-mark" />
+                    <p class="purchase-returns__text">
+                      Обратная доставка товаров на склад при отказе — <span>бесплатно</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="payment payment_type_absentees">
+                  <div class="basket-total__button">
+                    <p class="button__title">Оплата картой</p>
+                    <button class="button__image"></button>
+                  </div>
+                  <div class="payment__card payment__card_type_absentees">
+                    <img src="./images/mir.svg" alt="мир" />
+                    <span class="payment__card-number payment__card-number_type_absentees"
+                      >1234 12•• •••• 1234</span
+                    >
+                  </div>
+                  <div class="payment__proof">
+                    <label class="label label_type_payment">
+                      <input type="checkbox" class="checkbox" />
+                      <span class="checkbox__custom"></span>
+                      Списать оплату сразу
+                    </label>
+                    <p class="payment__text payment__text_type_payment">
+                      Спишем оплату с карты при получении
+                    </p>
+                  </div>
+                </div>
+                <button class="order__button" type="submit">Заказать</button>
+                <div class="agreement">
+                  <img src="./images/agreement.svg" class="agreement__image" alt="" />
+                  <span class="atreement__text">
+                    Соглашаюсь с правилами пользования торговой площадкой и возврата
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__copyrights">© 2023 ООО «Товары и точка»</p>
+      </div>
+    </footer>
+  </body>
+</html>

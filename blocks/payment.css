@@ -1,0 +1,44 @@
+.payment {
+  padding-top: 16px;
+}
+
+.payment_type_absentees {
+  padding-top: 23px;
+}
+
+.payment__card_type_absentees {
+  padding-top: 6px;
+  padding-left: 2px;
+}
+
+.payment__card-number_type_absentees {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  padding-left: 5px;
+}
+
+.payment__proof {
+  margin-top: 15px;
+  background-color: #f6f6fa;
+  padding: 8px 7px 12px 7px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.payment__text_type_payment {
+  padding-top: 8px;
+}
+
+.payment__info {
+  color: #9797af;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  padding-top: 7px;
+}

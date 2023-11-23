@@ -1,0 +1,41 @@
+.label {
+  position: relative;
+}
+
+.label__recipient {
+  display: flex;
+  flex-direction: column;
+}
+
+.label__checkbox {
+  display: flex;
+}
+
+.label__checkbox:hover {
+  cursor: pointer;
+}
+
+.label__recipient {
+  /* color: #fff; */
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  width: 100%;
+  flex-shrink: 1;
+}
+
+.label_type_payment {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+}
+
+.label_type_current {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+}
