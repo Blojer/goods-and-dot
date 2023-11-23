@@ -13,7 +13,7 @@
   height: 48px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  background: center no-repeat url('../../images/menu-button-pc.svg');
+  background: center no-repeat url('../images/menu-button-pc.svg');
   padding: 12px 10px;
 }
 
@@ -69,7 +69,7 @@
   height: 24px;
   border: none;
   background-color: transparent;
-  background: center no-repeat url(../../../images/search-button-pc.svg);
+  background: center no-repeat url(../images/search-button-pc.svg);
   top: 13px;
   right: 23px;
   z-index: 1;
@@ -177,7 +177,7 @@
     height: 28px;
     border-radius: 8px;
     border: none;
-    background: center no-repeat url('../../images/menu-button-mobile.svg');
+    background: center no-repeat url(../images/menu-button-mobile.svg);
     padding: 12px 10px;
   }
 }
