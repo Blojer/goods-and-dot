@@ -21,8 +21,10 @@ function createProduct(item) {
   const productWarehouse = productElement.querySelector('.item__warehouse');
   const productAddress = productElement.querySelector('.item__address');
   const productStore = productElement.querySelector('.item__store');
-  const productPrice = productElement.querySelector('.item-price');
-  const productOldPrice = productElement.querySelector('.item-price__old');
+  const productPrice = productElement.querySelector('.item-price_type_pc');
+  const productOldPrice = productElement.querySelector('.item-price__old_type_pc');
+  const productPriceMobile = productElement.querySelector('.item-price_type_mobile');
+  const productOldPriceMobile = productElement.querySelector('.item-price__old_type_mobile');
   const deleteButton = productElement.querySelector('.item__button-delete');
   const minusButton = productElement.querySelector('.count__button_type_minus');
   const plusButton = productElement.querySelector('.count__button_type_plus');
@@ -38,6 +40,8 @@ function createProduct(item) {
   function finalPrice(price) {
     productPrice.textContent = discountedPrice(item.price * price);
     productOldPrice.textContent = `${item.price * price} сом`;
+    productPriceMobile.textContent = discountedPrice(item.price * price).toLocaleString('ru');
+    productOldPriceMobile.textContent = `${item.price * price} сом`;
   }
 
   checkbox.addEventListener('click', function () {
@@ -94,8 +98,10 @@ function createProduct(item) {
   productWarehouse.textContent = item.warehouse;
   productAddress.textContent = item.address;
   productStore.textContent = item.company;
-  productPrice.textContent = discountedPrice(item.price);
+  productPrice.textContent = discountedPrice(item.price).toLocaleString('ru');
   productOldPrice.textContent = `${item.price} сом`;
+  productPriceMobile.textContent = discountedPrice(item.price).toLocaleString('ru');
+  productOldPriceMobile.textContent = `${item.price} сом`;
 
   deleteButton.addEventListener('click', deleteProduct);
   productElement.querySelector('.item__button-like').addEventListener('click', function (event) {

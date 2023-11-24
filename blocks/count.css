@@ -38,3 +38,21 @@
 .count__button_type_minus {
   padding: 2px 7px 6px 8px;
 }
+@media (max-width: 700px) {
+  .count__button {
+    width: 24px;
+    padding: 2.667px 9px 8px 6px;
+  }
+
+  .count__button_type_plus {
+    padding: 2.667px 9px 8px 4px;
+  }
+
+  .count__button_type_minus {
+    padding: 2.667px 9px 8px 6px;
+  }
+  .count__text {
+    width: 32px;
+    padding: 0 0 2px 0;
+  }
+}

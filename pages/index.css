@@ -1,9 +1,7 @@
 @import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 @import url(../blocks/container.css);
-@import url(../blocks/menu-pc.css);
 @import url(../blocks/header.css);
-@import url(../blocks/navbar-pc.css);
 @import url(../blocks/main.css);
 @import url(../blocks/basket.css);
 @import url(../blocks/item.css);

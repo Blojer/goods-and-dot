@@ -23,13 +23,16 @@ function calcProductsPrice() {
     const checkbox = item.querySelector('.checkbox');
     if (checkbox.checked) {
       const amount = item.querySelector('.count__text').value;
-      const price = item.querySelector('.item-price__old');
+      const price = item.querySelector('.item-price__old_type_pc');
       const currentAmount = parseInt(amount);
       const currentPrice = parseInt(price.innerText);
+      console.log(price);
       totalPrice += currentPrice;
       totalAmount += currentAmount;
     }
   });
+  // console.log(totalPrice);
+  // console.log(totalAmount);
 
   finalPriceText.innerText = `${discountedPrice(totalPrice).toLocaleString('ru')}`;
   totalAmountText.innerText = `${totalAmount.toLocaleString('ru')} товара`;

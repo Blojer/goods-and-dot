@@ -27,3 +27,24 @@
   font-weight: 700;
   line-height: 24px;
 }
+
+@media (max-width: 700px) {
+  .item-price {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .item-price__old {
+    margin: 0;
+  }
+
+  .item-price__old {
+    margin: 0;
+    padding: 0 0 1px 0;
+    display: flex;
+    margin-bottom: 1px;
+    align-items: flex-end;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  }
+}

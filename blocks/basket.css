@@ -107,6 +107,7 @@
     display: flex;
     padding-top: 9px;
     flex-direction: column;
+    gap: 11px;
   }
   .basket__items {
     list-style-type: none;
