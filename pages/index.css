@@ -52,7 +52,14 @@ body {
     padding: 16px 24px 24px;
   }
 }
-
+@media (max-width: 1023px) {
+  .background {
+    padding: 16px 16px 24px 16px;
+  }
+  .background_type_recipient {
+    padding-bottom: 0;
+  }
+}
 .purchase-returns {
   display: flex;
   gap: 8px;
@@ -61,6 +68,12 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+}
+
+@media (max-width: 700px) {
+  .purchase-returns {
+    padding: 22px 8px 0;
+  }
 }
 
 .cost__data {
@@ -80,6 +93,12 @@ body {
 
 .card__number {
   padding: 0 13px 0 10px;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding-top: 8px;
+  }
 }
 
 .order__button {

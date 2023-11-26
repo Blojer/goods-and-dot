@@ -115,6 +115,13 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 18px;
+  }
+  .basket__section {
+    padding: 16px 0 49px 0;
+  }
+
+  .basket__item_type_mobile {
+    display: flex;
   }
 }

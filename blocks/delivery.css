@@ -49,3 +49,33 @@
 .delivery__text {
   padding-left: 4px;
 }
+
+@media (max-width: 700px) {
+  .delivery {
+    padding-top: 32px;
+  }
+
+  .delivery__selected-adress {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .delivery__info {
+    padding-top: 8px;
+  }
+  .delivery__data {
+    padding: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .delivery__rating {
+    padding-top: 4px;
+  }
+  .delivery__cost {
+    flex-direction: column;
+    display: flex;
+    gap: 0px;
+  }
+}

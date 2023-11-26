@@ -141,7 +141,7 @@
     height: 106px;
     border-radius: 8px;
     object-fit: cover;
-    margin: 3px 0 0 0;
+    margin: 2px 0 0 0;
   }
   .item__prices_type_pc {
     display: none;
@@ -156,8 +156,15 @@
     border-radius: 4px;
     align-items: center;
   }
+
+  .item__control_type_absentees {
+    margin-top: 5px;
+    justify-content: flex-end;
+  }
+
   .item__title {
     margin: 0;
+    padding-top: 1px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -190,9 +197,7 @@
   .item__company {
     display: none;
   }
-  .basket__section {
-    padding: 16px 0 33px 0;
-  }
+
   .item__count {
     width: 80px;
     height: 32px;
@@ -200,10 +205,18 @@
 
   .item__buttons {
     gap: 22px;
-    margin-right: 13px;
+    margin-right: 12px;
+  }
+
+  .item__buttons_type_absentees {
+    margin-right: 4px;
   }
 
   .item__residue {
     padding-right: 14px;
+  }
+
+  .item__c-s {
+    padding-top: 8px;
   }
 }
