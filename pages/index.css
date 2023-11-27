@@ -59,6 +59,10 @@ body {
   .background_type_recipient {
     padding-bottom: 0;
   }
+  .background_type_sidebar {
+    background-color: #f6f6fa;
+    padding: 0 16px 40px 16px;
+  }
 }
 .purchase-returns {
   display: flex;
@@ -68,12 +72,6 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-}
-
-@media (max-width: 700px) {
-  .purchase-returns {
-    padding: 22px 8px 0;
-  }
 }
 
 .cost__data {
@@ -209,4 +207,53 @@ body {
   display: flex;
   gap: 8px;
   align-items: flex-start;
+}
+
+.nav__mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .basket-total__button,
+  .delivery-transfer__address,
+  .delivery-transfer__date,
+  .payment__card_type_absentees {
+    display: none;
+  }
+
+  .total__product {
+    padding-top: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .purchase-returns {
+    padding: 22px 8px 0;
+  }
+
+  .purchase-returns_type_absentees,
+  .payment__proof {
+    background-color: #f0ecf4;
+    padding: 8px 8px 12px 8px;
+    border-radius: 8px;
+  }
+
+  .payment__proof {
+  }
+
+  .delivery-transfer {
+    padding-top: 1px;
+  }
+  .nav__mobile {
+    background-color: #ffffff;
+    height: 56px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 0 13px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
