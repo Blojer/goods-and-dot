@@ -105,7 +105,6 @@
                             </div>
                           </div>
                         </label>
-
                         <div class="item__control">
                           <div class="item__count" data-counter>
                             <button class="count__button count__button_type_minus" type="button">
@@ -140,38 +139,39 @@
                 <p class="accordion__text">Отсутствуют · 3 товара</p>
                 <button class="accordion__button" type="button"></button>
               </div>
-            </div>
-            <div class="accordion__body">
-              <div class="container-mobile">
+              <div class="accordion__body">
                 <ul class="basket__items basket__items_type_absentees">
-                  <li class="basket__item">
-                    <div class="basket__mobile-box">
-                      <img
-                        class="item__image item__image_type_absentees"
-                        src="./images/t-shirt.png"
-                        alt="#"
-                      />
-                      <div class="item__description item__description_type_absentees">
-                        <h3 class="item__title item__title_type_absentees">
-                          Футболка UZcotton мужская
-                        </h3>
-                        <div class="item__c-s">
-                          <p class="item__color">
-                            Цвет: <span class="item__color-value">белый</span>
-                          </p>
-                          <p class="item__size">
-                            Размер: <span class="item__color-value">56</span>
-                          </p>
+                  <template id="product">
+                    <li class="basket__item">
+                      <div class="basket__mobile-box">
+                        <img
+                          class="item__image item__image_type_absentees"
+                          src="./images/t-shirt.png"
+                          alt="#"
+                        />
+                        <div class="item__description item__description_type_absentees">
+                          <h3 class="item__title item__title_type_absentees">
+                            Футболка UZcotton мужская
+                          </h3>
+                          <div class="item__c-s">
+                            <p class="item__color">
+                              Цвет: <span class="item__color-value">белый</span>
+                            </p>
+                            <p class="item__size">
+                              Размер: <span class="item__color-value">56</span>
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="item__control item__control_type_absentees">
-                      <div class="item__buttons item__buttons_type_absentees">
-                        <button class="item__button-like"></button>
-                        <button class="item__button-delete"></button>
+                      <div class="item__control item__control_type_absentees">
+                        <div class="item__buttons item__buttons_type_absentees">
+                          <button class="item__button-like"></button>
+                          <button class="item__button-delete"></button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
+                  </template>
+
                   <li class="basket__item">
                     <div class="basket__mobile-box">
                       <img
@@ -211,7 +211,7 @@
                       <div class="item__description item__description_type_absentees">
                         <h3 class="item__title item__title_type_absentees">
                           Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные,
-                          шестигранные, Faber-Castell
+                          шестигранные,Faber-Castell
                         </h3>
                         <div class="item__c-s" style="display: none">
                           <p class="item__color">
@@ -298,7 +298,7 @@
                   <p class="card__number">1234 56•• •••• 1234</p>
                   <p class="card__date">01/30</p>
                 </div>
-                <p class="payment__info">Спишем оплату с карты при получении</p>
+                <p class="payment__text">Спишем оплату с карты при получении</p>
               </div>
             </div>
             <div class="recipient">
@@ -372,7 +372,7 @@
                 <div class="container__header">
                   <h2 class="container__title">Итого</h2>
                   <div class="basket__price-box">
-                    <p class="basket__total-price">2 101 063</p>
+                    <p class="basket__total-price"></p>
                     <span class="basket__total-price basket__total-price_type_value">&nbspсом</span>
                   </div>
                 </div>
@@ -415,7 +415,7 @@
                   </div>
                   <div class="payment__proof">
                     <label class="label label_type_payment">
-                      <input type="checkbox" class="checkbox" />
+                      <input type="checkbox" class="checkbox chekbox_type_payment" />
                       <span class="checkbox__custom"></span>
                       Списать оплату сразу
                     </label>
@@ -451,5 +451,38 @@
       </a>
       <a class="nav__link" href="#"> <img src="./images/nav-profile-btn.svg" alt="Профиль" /> </a>
     </nav>
+    <div class="popup">
+      <div class="popup__box">
+        <div class="popup__header-box">
+          <h3 class="popup__header">Способ оплаты</h3>
+          <button class="popup__button"></button>
+        </div>
+        <form action="">
+          <div for="" class="popup__label">
+            <p class="popup__text">
+              <input name="card" type="radio" class="popup__input" value="2" />
+              <img src="./images/mir.svg" alt="" class="" />
+              1234 56•• •••• 1234
+            </p>
+            <p class="popup__text">
+              <input name="card" type="radio" class="popup__input" value="2" />
+              <img src="./images/mir.svg" alt="" class="" />
+              1234 56•• •••• 1234
+            </p>
+            <p class="popup__text">
+              <input name="card" type="radio" class="popup__input" value="2" />
+              <img src="./images/mir.svg" alt="" class="" />
+              1234 56•• •••• 1234
+            </p>
+            <p class="popup__text">
+              <input name="card" type="radio" class="popup__input" value="2" />
+              <img src="./images/mir.svg" alt="" class="" />
+              1234 56•• •••• 1234
+            </p>
+          </div>
+          <button class="popup__submit" type="submit" value="Выбрать">Выбрать</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

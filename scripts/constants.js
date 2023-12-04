@@ -8,7 +8,7 @@ const initialCards = [
     link: './images/book.png',
     company: 'OOO Вайлдберриз',
     price: 475,
-    amount: 5
+    amount: 2
   },
   {
     title:
@@ -32,6 +32,6 @@ const initialCards = [
     link: './images/t-shirt.png',
     company: 'OOO Вайлдберриз',
     price: 1015,
-    amount: 10
+    amount: 2
   }
 ];

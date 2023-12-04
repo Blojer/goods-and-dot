@@ -30,17 +30,17 @@
   line-height: 16px;
 }
 
-.payment__text_type_payment {
-  padding-top: 8px;
-}
-
-.payment__info {
+.payment__text {
   color: #9797af;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
   padding-top: 7px;
+}
+.payment__text_type_payment {
+  padding-top: 8px;
+  color: #000;
 }
 
 @media (max-width: 700px) {

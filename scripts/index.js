@@ -16,7 +16,6 @@ document.querySelector('.basket__items').addEventListener('change', e => {
 });
 
 const acc = document.querySelectorAll('.accordion');
-console.log(acc);
 let i;
 
 for (i = 0; i < acc.length; i++) {

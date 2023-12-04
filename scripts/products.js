@@ -30,6 +30,7 @@ function createProduct(item) {
   const plusButton = productElement.querySelector('.count__button_type_plus');
   const counter = productElement.querySelector('.count__text');
   const checkbox = productElement.querySelector('.checkbox');
+  const residue = productElement.querySelector('.item__residue');
 
   function discountedPrice(price) {
     const discount = percentage(price, 55);
@@ -86,6 +87,9 @@ function createProduct(item) {
 
   if (item.color === undefined && item.size === undefined) {
     productElement.querySelector('.item__c-s').remove();
+  }
+  if (item.amount > 2) {
+    residue.style.display = 'none';
   }
 
   finalPrice(item.price);

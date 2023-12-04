@@ -16,16 +16,17 @@ function validationCheckSubmit(input, error, textError) {
   if (input.value.length === 0) {
     error.innerText = textError;
     error.classList.add('error_hidden');
+    input.focus();
   }
 }
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  validationCheckSubmit(inputName, errorName, 'Укажите имя');
-  validationCheckSubmit(inputSurname, errorSurname, 'Введите фамилию');
-  validationCheckSubmit(inputEmail, errorEmail, 'Укажите электронную почту');
-  validationCheckSubmit(inputPhone, errorPhone, 'Укажите номер телефона');
   validationCheckSubmit(inputInn, errorInn, 'Укажите ИНН');
+  validationCheckSubmit(inputPhone, errorPhone, 'Укажите номер телефона');
+  validationCheckSubmit(inputEmail, errorEmail, 'Укажите электронную почту');
+  validationCheckSubmit(inputSurname, errorSurname, 'Введите фамилию');
+  validationCheckSubmit(inputName, errorName, 'Укажите имя');
 }
 
 form.addEventListener('submit', handleFormSubmit);
@@ -47,7 +48,7 @@ validationCheckInput(inputInn, errorInn);
 
 inputEmail.addEventListener('blur', () => {
   if (inputEmail.value.length === 0) {
-    errorEmail.classList.remove('error_hidden');
+    // errorEmail.classList.remove('error_hidden');
   }
   if (!inputEmail.validity.valid) {
     errorEmail.innerText = 'Проверьте адрес электронной почты';
